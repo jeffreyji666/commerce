@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>commerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+    <form name='loginForm' class='col-sm-offset-4 col-sm-4' role='form'>
+        <input name='userName' ng-model='user.name' type='text' class='form-control input-lg' placeholder='请输入用户名' required autofocus />
+        <input name='userPassword' ng-model='user.password' type='password' class='form-control input-lg' placeholder='密码' required />
+        <button class='btn-lg btn-primary btn-block' ng-click='submit()'>登录</button>
+        <button class='btn-lg btn-primary btn-block' ng-click='submit()'>注册</button>
+        <alert ng-repeat='a in alerts' type='a.type' close='closeAlert($index)'>{{a.msg}}</alert>
+    </form>
+</body>
+
+</html>
