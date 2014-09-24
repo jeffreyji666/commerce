@@ -4,12 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.intellect</groupId>
+		<groupId>com.intellect.commerce</groupId>
 		<artifactId>commerceApp</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.intellect.commerce</groupId>
 	<artifactId>commerceAndroid</artifactId>
 	<name>commerceAndroid</name>
 	<packaging>apk</packaging>
@@ -39,10 +38,20 @@
 		</dependency>
 		<dependency>
 			<groupId>com.actionbarsherlock</groupId>
-			<artifactId>library</artifactId>
-			<version>4.1.0</version>
+			<artifactId>actionbarsherlock</artifactId>
+			<version>4.3.1</version>
 			<type>apklib</type>
 		</dependency>
+		<!-- <dependency>
+			<groupId>com.github.gabrielemariotti.cards</groupId>
+			<artifactId>library</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.etsy.android.grid</groupId>
+			<artifactId>library</artifactId>
+			<version>1.0.5</version>
+		</dependency> -->
 		<dependency>
 			<groupId>com.github.rtyley</groupId>
 			<artifactId>roboguice-sherlock</artifactId>
