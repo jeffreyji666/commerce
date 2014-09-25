@@ -1,22 +1,7 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.intellect.commerce.accounts;
 
 import static android.accounts.AccountManager.KEY_AUTHTOKEN;
-import static com.github.mobile.accounts.AccountConstants.ACCOUNT_TYPE;
+import static com.intellect.commerce.accounts.AccountConstants.ACCOUNT_TYPE;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerFuture;
@@ -31,65 +16,64 @@ import java.io.IOException;
  */
 public class GitHubAccount {
 
-    private static final String TAG = "GitHubAccount";
+	private static final String TAG = "GitHubAccount";
 
-    private final Account account;
+	private final Account account;
 
-    private final AccountManager manager;
+	private final AccountManager manager;
 
-    /**
-     * Create account wrapper
-     *
-     * @param account
-     * @param manager
-     */
-    public GitHubAccount(final Account account, final AccountManager manager) {
-        this.account = account;
-        this.manager = manager;
-    }
+	/**
+	 * Create account wrapper
+	 * 
+	 * @param account
+	 * @param manager
+	 */
+	public GitHubAccount(final Account account, final AccountManager manager) {
+		this.account = account;
+		this.manager = manager;
+	}
 
-    /**
-     * Get username
-     *
-     * @return username
-     */
-    public String getUsername() {
-        return account.name;
-    }
+	/**
+	 * Get username
+	 * 
+	 * @return username
+	 */
+	public String getUsername() {
+		return account.name;
+	}
 
-    /**
-     * Get password
-     *
-     * @return password
-     */
-    public String getPassword() {
-        return manager.getPassword(account);
-    }
+	/**
+	 * Get password
+	 * 
+	 * @return password
+	 */
+	public String getPassword() {
+		return manager.getPassword(account);
+	}
 
-    /**
-     * Get auth token
-     *
-     * @return token
-     */
-    public String getAuthToken() {
-        @SuppressWarnings("deprecation")
-        AccountManagerFuture<Bundle> future = manager.getAuthToken(account,
-                ACCOUNT_TYPE, false, null, null);
+	/**
+	 * Get auth token
+	 * 
+	 * @return token
+	 */
+	public String getAuthToken() {
+		AccountManagerFuture<Bundle> future = manager.getAuthToken(account,
+				ACCOUNT_TYPE, false, null, null);
 
-        try {
-            Bundle result = future.getResult();
-            return result != null ? result.getString(KEY_AUTHTOKEN) : null;
-        } catch (AccountsException e) {
-            Log.e(TAG, "Auth token lookup failed", e);
-            return null;
-        } catch (IOException e) {
-            Log.e(TAG, "Auth token lookup failed", e);
-            return null;
-        }
-    }
+		try {
+			Bundle result = future.getResult();
+			return result != null ? result.getString(KEY_AUTHTOKEN) : null;
+		} catch (AccountsException e) {
+			Log.e(TAG, "Auth token lookup failed", e);
+			return null;
+		} catch (IOException e) {
+			Log.e(TAG, "Auth token lookup failed", e);
+			return null;
+		}
+	}
 
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + '[' + account.name + ']';
-    }
+	@Override
+	public String toString() {
+		return getClass().getSimpleName() + '[' + account.name + ']';
+	}
 }

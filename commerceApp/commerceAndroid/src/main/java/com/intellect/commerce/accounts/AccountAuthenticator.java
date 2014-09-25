@@ -37,7 +37,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.intellect.commerce.DefaultClient;
+import com.intellect.commerce.util.DefaultClient;
 
 import java.io.IOException;
 import java.util.Arrays;

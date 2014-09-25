@@ -27,10 +27,10 @@ import static android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD;
 import static android.view.KeyEvent.ACTION_DOWN;
 import static android.view.KeyEvent.KEYCODE_ENTER;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
-import static com.github.mobile.accounts.AccountConstants.*;
-import static com.github.mobile.RequestCodes.OTP_CODE_ENTER;
-import static com.github.mobile.accounts.TwoFactorAuthActivity.PARAM_EXCEPTION;
-import static com.github.mobile.accounts.TwoFactorAuthClient.TWO_FACTOR_AUTH_TYPE_SMS;
+import static com.intellect.commerce.accounts.AccountConstants.*;
+import static com.intellect.commerce.RequestCodes.OTP_CODE_ENTER;
+import static com.intellect.commerce.accounts.TwoFactorAuthActivity.PARAM_EXCEPTION;
+import static com.intellect.commerce.accounts.TwoFactorAuthClient.TWO_FACTOR_AUTH_TYPE_SMS;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
