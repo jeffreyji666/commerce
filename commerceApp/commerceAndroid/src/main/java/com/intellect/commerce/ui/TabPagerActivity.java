@@ -1,4 +1,4 @@
-package com.intellect.commerce.ui.user;
+package com.intellect.commerce.ui;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;

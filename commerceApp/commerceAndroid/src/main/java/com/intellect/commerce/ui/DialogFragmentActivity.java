@@ -1,4 +1,4 @@
-package com.intellect.commerce.ui.user;
+package com.intellect.commerce.ui;
 
 import static com.actionbarsherlock.view.Window.FEATURE_INDETERMINATE_PROGRESS;
 import android.os.Bundle;

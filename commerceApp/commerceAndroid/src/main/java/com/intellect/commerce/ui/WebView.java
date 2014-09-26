@@ -1,4 +1,4 @@
-package com.intellect.commerce.ui.user;
+package com.intellect.commerce.ui;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH;
