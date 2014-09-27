@@ -6,12 +6,14 @@ commerceApp/commerceAndroid/.project
 commerceApp/commerceAndroid/.settings/
 commerceApp/commerceAndroid/bin/
 commerceApp/commerceAndroid/target/
+commerceApp/commerceAndroid/project.properties
 
 commerceApp/commerceTest/.classpath
 commerceApp/commerceTest/.project
 commerceApp/commerceTest/.settings/
 commerceApp/commerceTest/bin/
 commerceApp/commerceTest/target/
+commerceApp/commerceTest/project.properties
 
 commerceWeb/.classpath
 commerceWeb/.project

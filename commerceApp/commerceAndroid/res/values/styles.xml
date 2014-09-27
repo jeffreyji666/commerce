@@ -14,6 +14,27 @@
         <item name="android:textSize">11sp</item>
     </style>
 
+    <style name="SubtitleText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TitleText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    
+    <style name="HeaderTitleText" parent="TitleText">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
     <style name="ListView">
         <item name="android:dividerHeight">2dp</item>
         <item name="android:divider">@drawable/list_divider</item>

@@ -16,7 +16,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<android.version>4.0.1.2</android.version>
-		<android.sdk.path>D:/Java/android-sdk-windows</android.sdk.path>
+		<android.sdk.path>/opt/java/android-sdk</android.sdk.path>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -24,7 +24,7 @@
 				<plugin>
 					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
 					<artifactId>android-maven-plugin</artifactId>
-					<version>4.0.0-rc.1</version>
+					<version>3.9.0-rc.3</version>
 					<extensions>true</extensions>
 					<configuration>
 						<sdk>

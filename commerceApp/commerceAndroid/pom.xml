@@ -38,20 +38,14 @@
 		</dependency>
 		<dependency>
 			<groupId>com.actionbarsherlock</groupId>
-			<artifactId>actionbarsherlock</artifactId>
-			<version>4.3.1</version>
+			<artifactId>library</artifactId>
+			<version>4.2.0</version>
 			<type>apklib</type>
 		</dependency>
-		<!-- <dependency>
-			<groupId>com.github.gabrielemariotti.cards</groupId>
-			<artifactId>library</artifactId>
-			<version>1.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.etsy.android.grid</groupId>
-			<artifactId>library</artifactId>
-			<version>1.0.5</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.github.gabrielemariotti.cards</groupId> 
+			<artifactId>library</artifactId> <version>1.9.0</version> </dependency> <dependency> 
+			<groupId>com.etsy.android.grid</groupId> <artifactId>library</artifactId> 
+			<version>1.0.5</version> </dependency> -->
 		<dependency>
 			<groupId>com.github.rtyley</groupId>
 			<artifactId>roboguice-sherlock</artifactId>
@@ -78,11 +72,6 @@
 			<artifactId>library</artifactId>
 			<version>2.3.1</version>
 			<type>apklib</type>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.mylyn.github</groupId>
-			<artifactId>org.eclipse.egit.github.core</artifactId>
-			<version>2.1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.kevinsawicki</groupId>
