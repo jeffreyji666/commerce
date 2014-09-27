@@ -1,19 +1,19 @@
-commerceApp/.project
-commerceApp/.settings/
+commerceApp-parent/.project
+commerceApp-parent/.settings/
 
-commerceApp/commerceAndroid/.classpath
-commerceApp/commerceAndroid/.project
-commerceApp/commerceAndroid/.settings/
-commerceApp/commerceAndroid/bin/
-commerceApp/commerceAndroid/target/
-commerceApp/commerceAndroid/project.properties
+commerceApp-parent/commerceApp/.classpath
+commerceApp-parent/commerceApp/.project
+commerceApp-parent/commerceApp/.settings/
+commerceApp-parent/commerceApp/bin/
+commerceApp-parent/commerceApp/target/
+commerceApp-parent/commerceApp/project.properties
 
-commerceApp/commerceTest/.classpath
-commerceApp/commerceTest/.project
-commerceApp/commerceTest/.settings/
-commerceApp/commerceTest/bin/
-commerceApp/commerceTest/target/
-commerceApp/commerceTest/project.properties
+commerceApp-parent/commerceApp-it/.classpath
+commerceApp-parent/commerceApp-it/.project
+commerceApp-parent/commerceApp-it/.settings/
+commerceApp-parent/commerceApp-it/bin/
+commerceApp-parent/commerceApp-it/target/
+commerceApp-parent/commerceApp-it/project.properties
 
 commerceWeb/.classpath
 commerceWeb/.project
