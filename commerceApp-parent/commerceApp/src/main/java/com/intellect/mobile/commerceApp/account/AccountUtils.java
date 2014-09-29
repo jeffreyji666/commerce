@@ -28,6 +28,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.intellect.mobile.commerceApp.R.string;
+import com.intellect.mobile.commerceApp.bean.User;
 import com.intellect.mobile.commerceApp.ui.LightAlertDialog;
 
 /**

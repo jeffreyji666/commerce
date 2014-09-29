@@ -1,5 +1,8 @@
 package com.intellect.mobile.commerceApp.ui;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,10 +11,6 @@ import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.intellect.mobile.commerceApp.R.string;
-import com.intellect.mobile.commerceApp.ui.FragmentPagerAdapter;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Pager adapter for a user's different views
@@ -31,88 +30,88 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
      * @param defaultUser
      */
     public HomePagerAdapter(final SherlockFragmentActivity activity,
-            final boolean defaultUser) {
-        super(activity);
+	    final boolean defaultUser) {
+	super(activity);
 
-        fragmentManager = activity.getSupportFragmentManager();
-        resources = activity.getResources();
-        this.defaultUser = defaultUser;
+	fragmentManager = activity.getSupportFragmentManager();
+	resources = activity.getResources();
+	this.defaultUser = defaultUser;
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-        case 0:
-            return defaultUser ? new UserReceivedNewsFragment()
-                    : new OrganizationNewsFragment();
-        case 1:
-            return new RepositoryListFragment();
-        case 2:
-            return defaultUser ? new MyFollowersFragment()
-                    : new MembersFragment();
-        case 3:
-            return new MyFollowingFragment();
-        default:
-            return null;
-        }
+	switch (position) {
+	case 0:
+	    return defaultUser ? new CommentsFragment()
+		    : new CommentsFragment();
+	case 1:
+	    return new CommentsFragment();
+	case 2:
+	    return defaultUser ? new CommentsFragment()
+		    : new CommentsFragment();
+	case 3:
+	    return new CommentsFragment();
+	default:
+	    return null;
+	}
     }
 
     /**
      * This methods clears any fragments that may not apply to the newly
      * selected org.
-     *
+     * 
      * @param isDefaultUser
      * @return this adapter
      */
     public HomePagerAdapter clearAdapter(boolean isDefaultUser) {
-        defaultUser = isDefaultUser;
+	defaultUser = isDefaultUser;
 
-        if (tags.isEmpty())
-            return this;
+	if (tags.isEmpty())
+	    return this;
 
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        for (String tag : tags) {
-            Fragment fragment = fragmentManager.findFragmentByTag(tag);
-            if (fragment != null)
-                transaction.remove(fragment);
-        }
-        transaction.commit();
-        tags.clear();
+	FragmentTransaction transaction = fragmentManager.beginTransaction();
+	for (String tag : tags) {
+	    Fragment fragment = fragmentManager.findFragmentByTag(tag);
+	    if (fragment != null)
+		transaction.remove(fragment);
+	}
+	transaction.commit();
+	tags.clear();
 
-        return this;
+	return this;
     }
 
     @Override
     public int getItemPosition(Object object) {
-        return POSITION_NONE;
+	return POSITION_NONE;
     }
 
     public Object instantiateItem(ViewGroup container, int position) {
-        Object fragment = super.instantiateItem(container, position);
-        if (fragment instanceof Fragment)
-            tags.add(((Fragment) fragment).getTag());
-        return fragment;
+	Object fragment = super.instantiateItem(container, position);
+	if (fragment instanceof Fragment)
+	    tags.add(((Fragment) fragment).getTag());
+	return fragment;
     }
 
     @Override
     public int getCount() {
-        return defaultUser ? 4 : 3;
+	return defaultUser ? 4 : 3;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position) {
-        case 0:
-            return resources.getString(string.tab_news);
-        case 1:
-            return resources.getString(string.tab_repositories);
-        case 2:
-            return resources.getString(defaultUser ? string.tab_followers_self
-                    : string.tab_members);
-        case 3:
-            return resources.getString(string.tab_following_self);
-        default:
-            return null;
-        }
+	switch (position) {
+	case 0:
+	    return resources.getString(string.tab_news);
+	case 1:
+	    return resources.getString(string.tab_repositories);
+	case 2:
+	    return resources.getString(defaultUser ? string.tab_followers_self
+		    : string.tab_members);
+	case 3:
+	    return resources.getString(string.tab_following_self);
+	default:
+	    return null;
+	}
     }
 }

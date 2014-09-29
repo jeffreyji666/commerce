@@ -7,5 +7,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="authenticator_conflict_title">App Conflict</string>
     <string name="authenticator_conflict_message">Another installed app is already configured for GitHub authentication.\n\nYou must remove the other app from the Accounts &amp; sync settings and uninstall it before the GitHub app can be used.</string>
-    
+    <string name="msg_login_error">用户未登录 或 密码错误</string>
+
 </resources>
