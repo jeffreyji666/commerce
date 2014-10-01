@@ -16,9 +16,6 @@ import com.intellect.mobile.commerceApp.R.string;
  * Pager adapter for a user's different views
  */
 public class HomePagerAdapter extends FragmentPagerAdapter {
-
-    private boolean defaultUser;
-
     private final FragmentManager fragmentManager;
 
     private final Resources resources;
@@ -27,28 +24,23 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
 
     /**
      * @param activity
-     * @param defaultUser
      */
-    public HomePagerAdapter(final SherlockFragmentActivity activity,
-	    final boolean defaultUser) {
+    public HomePagerAdapter(final SherlockFragmentActivity activity) {
 	super(activity);
 
 	fragmentManager = activity.getSupportFragmentManager();
 	resources = activity.getResources();
-	this.defaultUser = defaultUser;
     }
 
     @Override
     public Fragment getItem(int position) {
 	switch (position) {
 	case 0:
-	    return defaultUser ? new CommentsFragment()
-		    : new CommentsFragment();
+	    return new CommentsFragment();
 	case 1:
 	    return new CommentsFragment();
 	case 2:
-	    return defaultUser ? new CommentsFragment()
-		    : new CommentsFragment();
+	    return new CommentsFragment();
 	case 3:
 	    return new CommentsFragment();
 	default:
@@ -63,9 +55,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
      * @param isDefaultUser
      * @return this adapter
      */
-    public HomePagerAdapter clearAdapter(boolean isDefaultUser) {
-	defaultUser = isDefaultUser;
-
+    public HomePagerAdapter clearAdapter() {
 	if (tags.isEmpty())
 	    return this;
 
@@ -95,7 +85,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-	return defaultUser ? 4 : 3;
+	return 4;
     }
 
     @Override
@@ -106,8 +96,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
 	case 1:
 	    return resources.getString(string.tab_repositories);
 	case 2:
-	    return resources.getString(defaultUser ? string.tab_followers_self
-		    : string.tab_members);
+	    return resources.getString(string.tab_members);
 	case 3:
 	    return resources.getString(string.tab_following_self);
 	default:

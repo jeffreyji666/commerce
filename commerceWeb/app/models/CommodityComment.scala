@@ -5,6 +5,7 @@ import anorm.SqlParser._
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.Json
+import play.api.libs.json.Writes
 
 case class CommodityComment(id: Long = 0L, nickName: String, commodityId: Long, comment: String)
 
@@ -20,6 +21,14 @@ object CommodityComment {
   }
 
   implicit val commentFormat = Json.format[CommodityComment]
+
+  implicit val commentWrites = new Writes[CommodityComment] {
+    def writes(comment: CommodityComment) = Json.obj(
+      "id" -> comment.id,
+      "nickName" -> comment.nickName,
+      "commodityId" -> comment.commodityId,
+      "comment" -> comment.comment)
+  }
 
   def getCommodityCommentNum(commodityId: Long): Long = {
     DB.withConnection { implicit c =>

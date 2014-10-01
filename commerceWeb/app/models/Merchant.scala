@@ -5,6 +5,7 @@ import anorm.SqlParser._
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.Json
+import play.api.libs.json.Writes
 
 case class Merchant(id: Long = 0L, name: String, nickName: String, password: String, mobilePhone: String, email: String, address: String, identification: String = "", description: String)
 
@@ -25,6 +26,19 @@ object Merchant {
   }
 
   implicit val merchantFormat = Json.format[Merchant]
+
+  implicit val merchantWrites = new Writes[Merchant] {
+    def writes(merchant: Merchant) = Json.obj(
+      "id" -> merchant.id,
+      "name" -> merchant.name,
+      "nickName" -> merchant.nickName,
+      "password" -> merchant.password,
+      "mobilePhone" -> merchant.mobilePhone,
+      "email" -> merchant.email,
+      "address" -> merchant.address,
+      "identification" -> merchant.identification,
+      "description" -> merchant.description)
+  }
 
   def getMerchantNum(): Long = {
     DB.withConnection { implicit c =>

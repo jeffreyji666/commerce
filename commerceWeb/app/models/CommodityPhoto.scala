@@ -5,6 +5,7 @@ import anorm.SqlParser._
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.Json
+import play.api.libs.json.Writes
 
 case class CommodityPhoto(id: Long = 0L, commodityId: Long, photoUrl: String, photoDesc: String)
 
@@ -13,13 +14,21 @@ object CommodityPhoto {
     get[Long]("id") ~
       get[Long]("commodityId") ~
       get[String]("photoUrl") ~
-      get[String]("photoDesc") map {
+      get[String]("photoUrl") map {
         case id ~ commodityId ~ photoUrl ~ photoDesc =>
           CommodityPhoto(id, commodityId, photoUrl, photoDesc)
       }
   }
 
   implicit val photoFormat = Json.format[CommodityPhoto]
+
+  implicit val photoWrites = new Writes[CommodityPhoto] {
+    def writes(photo: CommodityPhoto) = Json.obj(
+      "id" -> photo.id,
+      "commodityId" -> photo.commodityId,
+      "photoUrl" -> photo.photoUrl,
+      "photoUrl" -> photo.photoUrl)
+  }
 
   def getCommodityPhotoNum(commodityId: Long): Long = {
     DB.withConnection { implicit c =>

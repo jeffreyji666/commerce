@@ -5,6 +5,7 @@ import anorm.SqlParser._
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.Json
+import play.api.libs.json.Writes
 
 case class User(id: Long = 0L, userName: String, nickName: String, password: String, mobilePhone: String, email: String, address: String)
 
@@ -20,9 +21,20 @@ object User {
         case id ~ userName ~ nickName ~ password ~ mobilePhone ~ email ~ address =>
           User(id, userName, nickName, password, mobilePhone, email, address)
       }
-  }  
-  
+  }
+
   implicit val userFormat = Json.format[User]
+
+  implicit val userWrites = new Writes[User] {
+    def writes(user: User) = Json.obj(
+      "id" -> user.id,
+      "userName" -> user.userName,
+      "nickName" -> user.nickName,
+      "password" -> user.password,
+      "mobilePhone" -> user.mobilePhone,
+      "email" -> user.email,
+      "address" -> user.address)
+  }
 
   def getUserNum(): Long = {
     DB.withConnection { implicit c =>

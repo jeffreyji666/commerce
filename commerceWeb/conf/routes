@@ -5,7 +5,9 @@
 
 # Home page
 GET       /getNames 		 controllers.Application.getNames
+GET       /getComments       controllers.Application.getComments
 GET       /api/auth/login    controllers.Application.login
+GET       /api/auth/register controllers.Application.register
 
 
 # Map the JS resource paths

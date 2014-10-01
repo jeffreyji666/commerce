@@ -24,7 +24,7 @@ create table if not exists merchant(
 	mobilePhone char(11) not null,
   	email varchar(50) not null,
 	address varchar(200) not null,
-	identification char(18) not null commment '身份证号码',
+	identification char(18) not null comment '身份证号码',
 	description varchar(512) not null comment '商家描述',
 	gmtCreated datetime not null default current_timestamp,
   	gmtModified datetime not null default current_timestamp on update current_timestamp,

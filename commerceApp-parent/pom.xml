@@ -11,8 +11,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<platform.version> 4.0.1.2</platform.version>
-		<android.sdk.path>/opt/java/android-sdk/</android.sdk.path>
+		<platform.version>4.0.1.2</platform.version>
+		<android.sdk.path>/opt/java/android-sdk</android.sdk.path>
 		<android.plugin.version>3.9.0-rc.3</android.plugin.version>
 	</properties>
 
@@ -60,7 +60,7 @@
 					<version>${android.plugin.version}</version>
 					<configuration>
 						<sdk>
-							<platform>14</platform>
+							<platform>16</platform>
 						</sdk>
 						<zipalign>
 							<verbose>true</verbose>

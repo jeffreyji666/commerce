@@ -11,6 +11,7 @@
     <color name="actionbar_background_bottom">#181818</color>
     <color name="actionbar_background_end">#282828</color>
     <color name="actionbar_background_start">#515252</color>
+    <color name="actionbar_text">#F4F2F1</color>
     <color name="sign_up_background">#E6E6E5</color>
     <color name="sign_up_background_bottom">#D4D4D4</color>
     <color name="sign_up_text">#666666</color>

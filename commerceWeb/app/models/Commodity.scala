@@ -5,6 +5,7 @@ import anorm.SqlParser._
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.Json
+import play.api.libs.json.Writes
 
 case class Commodity(id: Long = 0L, merchantId: Long, name: String, description: String, price: BigDecimal)
 
@@ -21,6 +22,15 @@ object Commodity {
   }
 
   implicit val commodityFormat = Json.format[Commodity]
+
+  implicit val commodityWrites = new Writes[Commodity] {
+    def writes(commodity: Commodity) = Json.obj(
+      "id" -> commodity.id,
+      "merchantId" -> commodity.merchantId,
+      "name" -> commodity.name,
+      "description" -> commodity.description,
+      "price" -> commodity.price)
+  }
 
   def getCommodityNum(merchantId: Long): Long = {
     DB.withConnection { implicit c =>

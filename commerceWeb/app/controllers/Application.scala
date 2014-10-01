@@ -2,12 +2,13 @@ package controllers
 
 import bean.JsonResult
 import models.User
+import play.api.libs.functional.syntax._
+import play.api.libs.json._
 import play.api.libs.json.JsError
 import play.api.libs.json.Json
 import play.api.mvc.Action
 import play.api.mvc.Controller
-import play.api.libs.json._
-import play.api.libs.functional.syntax._
+import models.CommodityComment
 
 object Application extends Controller {
   implicit val loginInfo = (
@@ -17,6 +18,10 @@ object Application extends Controller {
   def getNames = Action {
     val names = List(1, 2, 3)
     Ok(Json.toJson(names)).as(JSON)
+  }
+
+  def getComments = Action {
+    Ok(Json.toJson(CommodityComment.getCommodityComments(1L))).as(JSON)
   }
 
   def login = Action(parse.json) { implicit request =>
@@ -40,5 +45,4 @@ object Application extends Controller {
       e => BadRequest("Detected error:" + JsError.toFlatJson(e))
     }
   }
-
 }
