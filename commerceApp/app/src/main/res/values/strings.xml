@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">智选家电</string>
+    <string name="home">首页</string>
+    <string name="market">商城</string>
+    <string name="groupon">团购</string>
+    <string name="mine">我的</string>
+    <string name="net_location_title">网络定位</string>
+    <string name="gps_location_title">GPS定位</string>
+    <string name="location_latlng">"坐      标："</string>
+    <string name="location_accurancy">"精      度："</string>
+    <string name="location_method">定位方式：</string>
+    <string name="location_time">定位时间：</string>
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="location_description">位置描述：</string>
+    <string name="location_province">"   省   ：   "</string>
+    <string name="location_city">"   市   ：   "</string>
+    <string name="location_county">"   区   ：   "</string>
+    <string name="location_city_code">城市编码：</string>
+    <string name="location_area_code">区域编码：</string>
+</resources>

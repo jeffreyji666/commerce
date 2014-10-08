@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eee"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/home_radio"
+                android:text="@string/home" />
+
+            <RadioButton
+                android:id="@+id/mMarket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:drawableTop="@drawable/market_radio"
+                android:text="@string/market" />
+
+
+            <RadioButton
+                android:id="@+id/mGroupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:drawableTop="@drawable/groupon_radio"
+                android:text="@string/groupon" />
+
+            <RadioButton
+                android:id="@+id/mMine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:drawableTop="@drawable/mine_radio"
+                android:text="@string/mine" />
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

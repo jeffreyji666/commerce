@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+        }
+    }
+    compileSdkVersion 20
+    buildToolsVersion '20.0.0'
+    defaultConfig {
+        applicationId 'mobile.intellect.commerceapp'
+        minSdkVersion 14
+        targetSdkVersion 20
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    compile 'com.google.inject.extensions:guice-assistedinject:3.0'
+    compile 'org.roboguice:roboguice:2.0'
+    compile 'com.github.rtyley:roboguice-sherlock:1.4'
+    compile 'com.google.guava:guava:16.0.+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':badgeView')
+}
+
