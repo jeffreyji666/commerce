@@ -6,10 +6,19 @@ commerceApp/build/
 
 commerceApp/badgeView/badgeView.iml
 commerceApp/badgeView/build/
+commerceApp/badgeView/bin/
 
 commerceApp/app/app.iml
 commerceApp/app/build/
 commerceApp/app/bin/
+
+commerceApp/wishlist/wishlist.iml
+commerceApp/wishlist/build/
+commerceApp/wishlist/bin/
+
+commerceApp/actionbarsherlock/actionbarsherlock.iml
+commerceApp/actionbarsherlock/build/
+commerceApp/actionbarsherlock/bin/
 
 commerceWeb/.classpath
 commerceWeb/.project

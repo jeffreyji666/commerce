@@ -1,1 +1,3 @@
-include ':app', ':badgeView'
+include ':app', ':actionbarsherlock'
+include ':badgeView'
+include ':wishlist'

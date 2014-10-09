@@ -1,0 +1,58 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* pom.xml
+* target/
+* target/classes/
+* target/classes/META-INF/
+* target/classes/META-INF/MANIFEST.MF
+* target/classes/META-INF/maven/
+* target/classes/META-INF/maven/com.github.kevinsawicki/
+* target/classes/META-INF/maven/com.github.kevinsawicki/wishlist/
+* target/classes/META-INF/maven/com.github.kevinsawicki/wishlist/pom.properties
+* target/classes/META-INF/maven/com.github.kevinsawicki/wishlist/pom.xml
+* target/test-classes/
+* target/test-classes/com/
+* target/test-classes/com/github/
+* target/test-classes/com/github/kevinsawicki/
+* target/test-classes/com/github/kevinsawicki/wishlist/
+* target/test-classes/com/github/kevinsawicki/wishlist/ToasterTest.class
+* target/test-classes/com/github/kevinsawicki/wishlist/ViewFinderTest$1.class
+* target/test-classes/com/github/kevinsawicki/wishlist/ViewFinderTest$2.class
+* target/test-classes/com/github/kevinsawicki/wishlist/ViewFinderTest$3.class
+* target/test-classes/com/github/kevinsawicki/wishlist/ViewFinderTest.class
+* target/test-classes/com/github/kevinsawicki/wishlist/ViewUtilsTest.class
+* test-libs/
+* test-libs/junit-4.10.jar
+* test-libs/robolectric-1.1-jar-with-dependencies.jar
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => wishlist/src/main/AndroidManifest.xml
+* res/ => wishlist/src/main/res/
+* src/main/java/ => wishlist/src/main/java/
+* src/test/java/ => wishlist/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
