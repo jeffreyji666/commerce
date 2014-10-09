@@ -1,5 +1,9 @@
 commerceApp/commerceApp.iml
 commerceApp/.gradle
+commerceApp/gradle/
+commerceApp/gradlew
+commerceApp/gradlew.bat
+commerceApp/gradle.properties
 commerceApp/local.properties
 commerceApp/.idea/
 commerceApp/build/

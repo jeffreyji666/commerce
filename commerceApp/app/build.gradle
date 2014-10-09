@@ -30,4 +30,5 @@ dependencies {
     compile project(':badgeView')
     compile project(':wishlist')
     compile project(':actionbarsherlock')
+    compile 'com.google.guava:guava-io:r03@jar'
 }
