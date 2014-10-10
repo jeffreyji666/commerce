@@ -23,6 +23,7 @@ commerceApp/wishlist/bin/
 commerceApp/actionbarsherlock/actionbarsherlock.iml
 commerceApp/actionbarsherlock/build/
 commerceApp/actionbarsherlock/bin/
+commerceApp/actionbarsherlock/target/
 
 commerceWeb/.classpath
 commerceWeb/.project
