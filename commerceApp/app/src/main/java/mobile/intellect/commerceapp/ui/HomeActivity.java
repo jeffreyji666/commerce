@@ -11,14 +11,17 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import mobile.intellect.commerceapp.R;
+import mobile.intellect.commerceapp.app.AppContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import mobile.intellect.commerceapp.R;
-
 public class HomeActivity extends FragmentActivity {
     private static final String TAG = "HomeActivity";
+
+    private AppContext ctx;
+
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapter;
     private List<Fragment> mDatas;
@@ -38,6 +41,7 @@ public class HomeActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
 
+        ctx = (AppContext)getApplication();
         initView();
     }
 
@@ -54,7 +58,14 @@ public class HomeActivity extends FragmentActivity {
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int type = ctx.getNetworkType();
+                switch(type){
+                    case 0:
+                    case 1:
+                        
+                    default:
 
+                }
             }
         });
         qrcode.setOnClickListener(new View.OnClickListener() {
