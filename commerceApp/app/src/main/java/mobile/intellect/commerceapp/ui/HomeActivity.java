@@ -1,5 +1,6 @@
 package mobile.intellect.commerceapp.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import mobile.intellect.commerceapp.R;
 import mobile.intellect.commerceapp.app.AppContext;
+import mobile.intellect.commerceapp.lbs.GPSLocationActivity;
+import mobile.intellect.commerceapp.lbs.NetLocationActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +44,7 @@ public class HomeActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home);
 
-        ctx = (AppContext)getApplication();
+        ctx = (AppContext) getApplication();
         initView();
     }
 
@@ -59,12 +62,10 @@ public class HomeActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 int type = ctx.getNetworkType();
-                switch(type){
-                    case 0:
-                    case 1:
-                        
-                    default:
-
+                if (type == 0) {
+                } else {
+                    Intent intent = type == 1 ? new Intent(v.getContext(), NetLocationActivity.class) : new Intent(v.getContext(), GPSLocationActivity.class);
+                    v.getContext().startActivity(intent);
                 }
             }
         });
