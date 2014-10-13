@@ -9,18 +9,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:gravity="center">
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-            </LinearLayout>
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/welcome_bar"/>
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -37,9 +32,9 @@
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_below="@+id/clothes_icon"
-                              android:paddingLeft="30dp"
-                              android:paddingRight="30dp"
-                              android:text="服装"/>
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="服装鞋帽"/>
                     <ImageView android:src="@drawable/clothes"
                                android:id="@+id/clothes_icon"
                                android:layout_width="wrap_content"
@@ -59,9 +54,9 @@
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_below="@+id/elec_icon"
-                              android:paddingLeft="30dp"
-                              android:paddingRight="30dp"
-                              android:text="电器"/>
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="家用电器"/>
 
                     <ImageView android:src="@drawable/clothes"
                                android:id="@+id/elec_icon"
@@ -82,9 +77,9 @@
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_below="@+id/camera_str_icon"
-                              android:paddingLeft="30dp"
-                              android:paddingRight="30dp"
-                              android:text="服装"/>
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="酒店宾馆"/>
 
                     <ImageView android:src="@drawable/clothes"
                                android:id="@+id/camera_str_icon"
@@ -105,9 +100,9 @@
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_below="@+id/phone_icon"
-                              android:paddingLeft="30dp"
-                              android:paddingRight="30dp"
-                              android:text="服装"/>
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="旅游观光"/>
 
                     <ImageView android:src="@drawable/clothes"
                                android:id="@+id/phone_icon"
@@ -125,6 +120,97 @@
                     android:layout_centerVertical="true"
                     android:orientation="horizontal"
                     android:gravity="center">
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/sports_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/sports_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="服装鞋帽"/>
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/sports_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/sports_str"
+                               android:layout_alignRight="@+id/sports_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/haircut_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/haircut_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="家用电器"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/haircut_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/haircut_str"
+                               android:layout_alignRight="@+id/haircut_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/decorate_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/decorate_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="酒店宾馆"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/decorate_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/decorate_str"
+                               android:layout_alignRight="@+id/decorate_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/travel_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/travel_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="旅游观光"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/travel_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/travel_str"
+                               android:layout_alignRight="@+id/travel_str">
+                    </ImageView>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="wrap_content"
@@ -132,8 +218,98 @@
                     android:layout_centerVertical="true"
                     android:orientation="horizontal"
                     android:gravity="center">
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/art_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/art_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="服装鞋帽"/>
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/art_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/art_str"
+                               android:layout_alignRight="@+id/art_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/daily_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/daily_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="家用电器"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/daily_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/daily_str"
+                               android:layout_alignRight="@+id/daily_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/watch_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/watch_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="酒店宾馆"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/watch_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/watch_str"
+                               android:layout_alignRight="@+id/watch_str">
+                    </ImageView>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/others_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/others_icon"
+                              android:paddingLeft="20dp"
+                              android:paddingRight="20dp"
+                              android:text="旅游观光"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/others_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/others_str"
+                               android:layout_alignRight="@+id/others_str">
+                    </ImageView>
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 </RelativeLayout>
