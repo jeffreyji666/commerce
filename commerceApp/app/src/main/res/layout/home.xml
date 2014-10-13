@@ -27,43 +27,96 @@
                     android:layout_centerVertical="true"
                     android:orientation="horizontal"
                     android:gravity="center">
-                <RelativeLayout android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1">
-                    <ImageView android:layout_height="match_parent"
-                               android:layout_width="match_parent"
-                               android:src="@drawable/clothes"></ImageView>
-                    <TextView android:layout_height="match_parent"
-                              android:layout_width="match_parent"></TextView>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/clothes_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/clothes_icon"
+                              android:paddingLeft="30dp"
+                              android:paddingRight="30dp"
+                              android:text="服装"/>
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/clothes_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/clothes_str"
+                               android:layout_alignRight="@+id/clothes_str">
+                    </ImageView>
                 </RelativeLayout>
-                <RelativeLayout android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1">
-                    <ImageView android:id="@+id/clothes"
-                               android:layout_height="match_parent"
-                               android:layout_width="match_parent"
-                               android:src="@drawable/clothes"></ImageView>
-                    <TextView android:layout_height="match_parent"
-                              android:layout_width="match_parent"
-                              android:text="@string/clothes"></TextView>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/elec_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/elec_icon"
+                              android:paddingLeft="30dp"
+                              android:paddingRight="30dp"
+                              android:text="电器"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/elec_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/elec_str"
+                               android:layout_alignRight="@+id/elec_str">
+                    </ImageView>
                 </RelativeLayout>
-                <RelativeLayout android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1">
-                    <ImageView android:layout_height="match_parent"
-                               android:layout_width="match_parent"
-                               android:src="@drawable/clothes"></ImageView>
-                    <TextView android:layout_height="match_parent"
-                              android:layout_width="match_parent"></TextView>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/camera_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/camera_str_icon"
+                              android:paddingLeft="30dp"
+                              android:paddingRight="30dp"
+                              android:text="服装"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/camera_str_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/camera_str"
+                               android:layout_alignRight="@+id/camera_str">
+                    </ImageView>
                 </RelativeLayout>
-                <RelativeLayout android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1">
-                    <ImageView android:layout_height="match_parent"
-                               android:layout_width="match_parent"
-                               android:src="@drawable/clothes"></ImageView>
-                    <TextView android:layout_height="match_parent"
-                              android:layout_width="match_parent"></TextView>
+                <RelativeLayout android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@android:color/transparent">
+                    <TextView android:id="@+id/phone_str"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/phone_icon"
+                              android:paddingLeft="30dp"
+                              android:paddingRight="30dp"
+                              android:text="服装"/>
+
+                    <ImageView android:src="@drawable/clothes"
+                               android:id="@+id/phone_icon"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:minHeight="50dip"
+                               android:layout_alignLeft="@+id/phone_str"
+                               android:layout_alignRight="@+id/phone_str">
+                    </ImageView>
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
@@ -83,6 +136,4 @@
         </LinearLayout>
 
     </ScrollView>
-
-
 </RelativeLayout>
