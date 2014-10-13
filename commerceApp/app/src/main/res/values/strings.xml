@@ -21,4 +21,5 @@
     <string name="location_county">"   区   ：   "</string>
     <string name="location_city_code">城市编码：</string>
     <string name="location_area_code">区域编码：</string>
+    <string name="clothes">服装</string>
 </resources>
