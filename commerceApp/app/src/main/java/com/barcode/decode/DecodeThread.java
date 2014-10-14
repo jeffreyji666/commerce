@@ -16,13 +16,6 @@
 
 package com.barcode.decode;
 
-import java.util.Collection;
-import java.util.EnumSet;
-import java.util.Hashtable;
-import java.util.Vector;
-import java.util.concurrent.CountDownLatch;
-
-import net.oschina.app.ui.CaptureActivity;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -30,6 +23,15 @@ import android.util.Log;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
+
+
+import java.util.Collection;
+import java.util.EnumSet;
+import java.util.Hashtable;
+import java.util.Vector;
+import java.util.concurrent.CountDownLatch;
+
+import mobile.intellect.commerceapp.ui.CaptureActivity;
 
 /**
  * This thread does all the heavy lifting of decoding the images.

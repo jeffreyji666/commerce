@@ -20,8 +20,6 @@ import java.io.ByteArrayOutputStream;
 import java.util.Hashtable;
 import java.util.Map;
 
-import net.oschina.app.R;
-import net.oschina.app.ui.CaptureActivity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -36,6 +34,9 @@ import com.google.zxing.PlanarYUVLuminanceSource;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
+
+import mobile.intellect.commerceapp.R;
+import mobile.intellect.commerceapp.ui.CaptureActivity;
 
 final class DecodeHandler extends Handler {
 

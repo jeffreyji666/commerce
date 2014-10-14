@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import net.oschina.app.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
@@ -36,6 +35,8 @@ import android.view.View;
 
 import com.barcode.camera.CameraManager;
 import com.google.zxing.ResultPoint;
+
+import mobile.intellect.commerceapp.R;
 
 /**
  * This view is overlaid on top of the camera preview. It adds the viewfinder
