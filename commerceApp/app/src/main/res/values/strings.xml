@@ -21,5 +21,19 @@
     <string name="location_county">"   区   ：   "</string>
     <string name="location_city_code">城市编码：</string>
     <string name="location_area_code">区域编码：</string>
-    <string name="clothes_icon">服装</string>
+    <string name="daily_elec">生活电器</string>
+    <string name="kitchen_elec">厨房电器</string>
+    <string name="personal_health">个人健康</string>
+    <string name="useful_tool">五金家装</string>
+    <string name="mobile_comm">手机通讯</string>
+    <string name="mobile_accessory">手机配件</string>
+    <string name="digit_accessory">数码配件</string>
+    <string name="intellect_device">智能设备</string>
+    <string name="computer">电脑整机</string>
+    <string name="computer_accessory">电脑配件</string>
+    <string name="network_device">网络产品</string>
+    <string name="office_printer">办公打印</string>
+    <string name="capture_head_title">扫一扫</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+
 </resources>

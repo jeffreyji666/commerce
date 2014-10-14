@@ -12,13 +12,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import mobile.intellect.commerceapp.R;
 import mobile.intellect.commerceapp.app.AppContext;
 import mobile.intellect.commerceapp.lbs.GPSLocationActivity;
 import mobile.intellect.commerceapp.lbs.NetLocationActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeActivity extends FragmentActivity {
     private static final String TAG = "HomeActivity";
@@ -37,6 +39,19 @@ public class HomeActivity extends FragmentActivity {
     private RadioButton mGroupon;
     private RadioButton mMarket;
     private RadioButton mMine;
+
+    private RelativeLayout dailyElec;
+    private RelativeLayout kitchenElec;
+    private RelativeLayout personalHealth;
+    private RelativeLayout usefulTool;
+    private RelativeLayout mobileComm;
+    private RelativeLayout mobileAccessory;
+    private RelativeLayout digitAccessory;
+    private RelativeLayout intellectDevice;
+    private RelativeLayout computer;
+    private RelativeLayout computerAccessory;
+    private RelativeLayout networkDevice;
+    private RelativeLayout officePrinter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +72,18 @@ public class HomeActivity extends FragmentActivity {
         mMarket = (RadioButton) findViewById(R.id.mMarket);
         mGroupon = (RadioButton) findViewById(R.id.mGroupon);
         mMine = (RadioButton) findViewById(R.id.mMine);
+        dailyElec = (RelativeLayout) findViewById(R.id.daily_elec);
+        kitchenElec = (RelativeLayout) findViewById(R.id.kitchen_elec);
+        personalHealth = (RelativeLayout) findViewById(R.id.personal_health);
+        usefulTool = (RelativeLayout) findViewById(R.id.useful_tool);
+        mobileComm = (RelativeLayout) findViewById(R.id.mobile_comm);
+        mobileAccessory = (RelativeLayout) findViewById(R.id.mobile_accessory);
+        digitAccessory = (RelativeLayout) findViewById(R.id.digit_accessory);
+        intellectDevice = (RelativeLayout) findViewById(R.id.intellect_device);
+        computer = (RelativeLayout) findViewById(R.id.computer);
+        computerAccessory = (RelativeLayout) findViewById(R.id.computer_accessory);
+        networkDevice = (RelativeLayout) findViewById(R.id.network_device);
+        officePrinter = (RelativeLayout) findViewById(R.id.office_printer);
 
         location.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,9 +99,97 @@ public class HomeActivity extends FragmentActivity {
         qrcode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
             }
         });
+
+        dailyElec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        kitchenElec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        personalHealth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        usefulTool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        mobileComm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        mobileAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        digitAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        intellectDevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        computer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        computerAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        networkDevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        officePrinter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommodityActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+
         mDatas = new ArrayList<Fragment>();
         HomeFragment home = new HomeFragment();
         MarketFragment market = new MarketFragment();

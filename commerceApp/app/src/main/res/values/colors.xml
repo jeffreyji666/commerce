@@ -16,5 +16,7 @@
     <color name="btncolor2">#ff73ac29</color>
     <color name="btncolor3">#ffd94926</color>
     <color name="btncolor4">#ff778592</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="head_text">#0e5986</color>
 
 </resources>
