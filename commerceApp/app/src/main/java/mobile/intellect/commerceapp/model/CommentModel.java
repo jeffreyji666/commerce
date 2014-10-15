@@ -15,6 +15,7 @@ public class CommentModel {
             comment.setId(Integer.valueOf(i).longValue());
             comment.setCommodityId(1L);
             comment.setNickName("name" + i);
+            comments.add(comment);
         }
         return comments;
     }

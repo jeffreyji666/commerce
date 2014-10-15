@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import mobile.intellect.commerceapp.R;
 
-
 public class LoadListView extends ListView implements OnScrollListener {
     View footer;
     int totalItemCount;

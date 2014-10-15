@@ -5,6 +5,9 @@ android {
         config {
         }
     }
+    lintOptions {
+        abortOnError false
+    }
     compileSdkVersion 20
     buildToolsVersion '20.0.0'
     defaultConfig {
