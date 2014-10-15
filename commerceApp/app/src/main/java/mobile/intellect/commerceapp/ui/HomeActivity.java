@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import mobile.intellect.commerceapp.R;
 import mobile.intellect.commerceapp.app.AppContext;
 import mobile.intellect.commerceapp.lbs.GPSLocationActivity;
@@ -23,7 +26,7 @@ public class HomeActivity extends FragmentActivity {
     private AppContext ctx;
 
     private ViewPager mViewPager;
-    private FragmentPagerAdapter mAdapter;
+    private FragmentStatePagerAdapter  mAdapter;
     private List<Fragment> mDatas;
 
     private Button location;
@@ -84,7 +87,7 @@ public class HomeActivity extends FragmentActivity {
         mDatas.add(groupon);
         mDatas.add(mine);
 
-        mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
+        mAdapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int i) {
                 return mDatas.get(i);
