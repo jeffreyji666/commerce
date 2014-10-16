@@ -4,18 +4,12 @@ import android.content.Context;
 import android.hardware.Camera;
 import android.os.AsyncTask;
 import android.util.Log;
+import com.barcode.executor.AsyncTaskExecInterface;
+import com.barcode.executor.AsyncTaskExecManager;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.barcode.executor.AsyncTaskExecInterface;
-import com.barcode.executor.AsyncTaskExecManager;
-
-/**
- * 自动对焦管理
- * @author 火蚁（http://my.oschina/LittleDY）
- * @created 2014-03-14
- */
 final class AutoFocusManager implements Camera.AutoFocusCallback {
 
 	private static final String TAG = AutoFocusManager.class.getSimpleName();

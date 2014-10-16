@@ -12,14 +12,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.text.ClipboardManager;
-import android.view.KeyEvent;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.ImageView;
-
 import com.barcode.camera.CameraManager;
 import com.barcode.decode.CaptureActivityHandler;
 import com.barcode.decode.FinishListener;
@@ -28,6 +22,9 @@ import com.barcode.view.ViewfinderView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.google.zxing.ResultMetadataType;
+import mobile.intellect.commerceapp.R;
+import mobile.intellect.commerceapp.app.AppContext;
+import mobile.intellect.commerceapp.model.Barcode;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -36,14 +33,8 @@ import java.util.EnumSet;
 import java.util.Map;
 import java.util.Vector;
 
-import mobile.intellect.commerceapp.R;
-import mobile.intellect.commerceapp.app.AppContext;
-import mobile.intellect.commerceapp.model.Barcode;
-
 /**
  * 扫描二维码
- *
- * @author 火蚁（http://my.oschina/LittleDY）
  */
 @SuppressWarnings("deprecation")
 public class CaptureActivity extends Activity implements SurfaceHolder.Callback, View.OnClickListener {
