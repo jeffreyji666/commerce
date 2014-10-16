@@ -49,6 +49,9 @@
                 android:name=".ui.CommodityActivity"
                 android:label="@string/app_name"
                 android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.CaptureActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
