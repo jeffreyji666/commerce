@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+
 import mobile.intellect.commerceapp.R;
 import mobile.intellect.commerceapp.ui.HomeActivity;
 
+import com.umeng.update.UmengUpdateAgent;
 /**
  * Created by wgji on 2014/10/13.
  */
@@ -18,6 +20,7 @@ public class AppStart extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UmengUpdateAgent.update(this);
         final View view = View.inflate(this, R.layout.start, null);
         setContentView(view);
 
