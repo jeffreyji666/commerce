@@ -1,5 +1,8 @@
 package models
 
+import org.joda.time.LocalDate
+
+import AnormExtension.{ localDateToStatement, rowToLocalDate }
 import anorm._
 import anorm.SqlParser._
 import play.api.Play.current
@@ -7,16 +10,17 @@ import play.api.db.DB
 import play.api.libs.json.Json
 import play.api.libs.json.Writes
 
-case class CommodityComment(id: Long = 0L, nickName: String, commodityId: Long, comment: String)
+case class CommodityComment(id: Long = 0L, nickName: String, commodityId: Long, comment: String, gmtCreated: LocalDate)
 
 object CommodityComment {
   val comment: RowParser[CommodityComment] = {
     get[Long]("id") ~
       get[String]("nickName") ~
       get[Long]("commodityId") ~
-      get[String]("comment") map {
-        case id ~ nickName ~ commodityId ~ comment =>
-          CommodityComment(id, nickName, commodityId, comment)
+      get[String]("comment") ~
+      get[LocalDate]("gmtCreated") map {
+        case id ~ nickName ~ commodityId ~ comment ~ gmtCreated =>
+          CommodityComment(id, nickName, commodityId, comment, gmtCreated)
       }
   }
 
@@ -27,7 +31,8 @@ object CommodityComment {
       "id" -> comment.id,
       "nickName" -> comment.nickName,
       "commodityId" -> comment.commodityId,
-      "comment" -> comment.comment)
+      "comment" -> comment.comment,
+      "gmtCreated" -> comment.gmtCreated.toString)
   }
 
   def getCommodityCommentNum(commodityId: Long): Long = {
