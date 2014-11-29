@@ -26,7 +26,8 @@
                 android:button="@null"
                 android:checked="true"
                 android:drawableTop="@drawable/home_radio"
-                android:text="@string/home" />
+                android:text="@string/home"
+                android:textColor="@color/blue"/>
 
             <RadioButton
                 android:id="@+id/mMarket"
@@ -37,7 +38,8 @@
                 android:background="@drawable/radio"
                 android:button="@null"
                 android:drawableTop="@drawable/market_radio"
-                android:text="@string/market" />
+                android:text="@string/market"
+                android:textColor="@color/blue"/>
 
 
             <RadioButton
@@ -49,7 +51,8 @@
                 android:background="@drawable/radio"
                 android:button="@null"
                 android:drawableTop="@drawable/groupon_radio"
-                android:text="@string/groupon" />
+                android:text="@string/groupon"
+                android:textColor="@color/blue"/>
 
             <RadioButton
                 android:id="@+id/mMine"
@@ -60,7 +63,8 @@
                 android:background="@drawable/radio"
                 android:button="@null"
                 android:drawableTop="@drawable/mine_radio"
-                android:text="@string/mine" />
+                android:text="@string/mine"
+                android:textColor="@color/blue"/>
         </RadioGroup>
     </RelativeLayout>
 </LinearLayout>
