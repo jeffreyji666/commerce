@@ -35,5 +35,14 @@
     <string name="office_printer">办公打印</string>
     <string name="capture_head_title">扫一扫</string>
     <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
-
+    <string name="personal_center">个人中心</string>
+    <string name="login_register">登陆/注册</string>
+    <string name="exit">退出</string>
+    <string name="order">我的订单</string>
+    <string name="cart">我的购物车</string>
+    <string name="mygroupon">我的优惠券</string>
+    <string name="points">我的会员积分</string>
+    <string name="favorite">我的收藏</string>
+    <string name="account">我的账户</string>
+    <string name="address">收货地址管理</string>
 </resources>
